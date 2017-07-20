@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">TourGuide</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="alhilal">ALHILAL CLUB</string>
+    <string name="alhilal_location">Alariga - st21</string>
+
+    <string name="king_abdulaziz_muzem">King Abdulaziz museum</string>
+    <string name="museum_location">Almalz - st33</string>
+
+    <string name="alromnceah_restaurant">Alromnceah Restaurant</string>
+    <string name="alromnceah_restaurant_location">almsaif - king Abdulziz st</string>
+
+    <string name="maker_fair">Maker Fair</string>
+    <string name="maker_location">alriyadh center - king Abdullah st</string>
+</resources>
