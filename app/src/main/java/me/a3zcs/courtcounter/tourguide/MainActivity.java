@@ -1,9 +1,9 @@
 package me.a3zcs.courtcounter.tourguide;
 
+import android.os.Bundle;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         places.add(place3);
         places.add(place4);
 
-        fragmentPagerAdapter = new PagerAdapter(getSupportFragmentManager(),places);
+        fragmentPagerAdapter = new PagerAdapter(getSupportFragmentManager(),places,this);
         viewPager.setAdapter(fragmentPagerAdapter);
     }
 }

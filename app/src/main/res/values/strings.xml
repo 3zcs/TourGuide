@@ -13,4 +13,9 @@
 
     <string name="maker_fair">Maker Fair</string>
     <string name="maker_location">alriyadh center - king Abdullah st</string>
+
+    <string name="restaurant">Restaurant</string>
+    <string name="event">eEvent</string>
+    <string name="sport">Sport</string>
+    <string name="history">History</string>
 </resources>

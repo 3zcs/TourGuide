@@ -1,5 +1,6 @@
 package me.a3zcs.courtcounter.tourguide.adapter;
 
+import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -7,16 +8,12 @@ import android.support.v4.app.FragmentPagerAdapter;
 import java.util.Arrays;
 import java.util.List;
 
+import me.a3zcs.courtcounter.tourguide.R;
 import me.a3zcs.courtcounter.tourguide.fragments.EventFragment;
 import me.a3zcs.courtcounter.tourguide.fragments.HistoricalPlaceFragment;
 import me.a3zcs.courtcounter.tourguide.fragments.RestaurantFragment;
 import me.a3zcs.courtcounter.tourguide.fragments.SportsClubFragment;
 import me.a3zcs.courtcounter.tourguide.model.Place;
-
-import static me.a3zcs.courtcounter.tourguide.Constant.EVENT;
-import static me.a3zcs.courtcounter.tourguide.Constant.HISROTY;
-import static me.a3zcs.courtcounter.tourguide.Constant.RESTAURANT;
-import static me.a3zcs.courtcounter.tourguide.Constant.SPORT;
 
 /**
  * Created by root on 19/07/17.
@@ -24,10 +21,12 @@ import static me.a3zcs.courtcounter.tourguide.Constant.SPORT;
 
 public class PagerAdapter extends FragmentPagerAdapter {
     private final int TAPS_NUMBER = 4;
+    Context context;
     private List<Place>places;
-    public PagerAdapter(FragmentManager fm,List<Place>placeList) {
+    public PagerAdapter(FragmentManager fm,List<Place>placeList,Context context) {
         super(fm);
         places = placeList;
+        this.context = context;
     }
 
     @Override
@@ -57,7 +56,10 @@ public class PagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public CharSequence getPageTitle(int position) {
-        List<String> list = Arrays.asList(EVENT,HISROTY,RESTAURANT,SPORT);
+        List<String> list = Arrays.asList(context.getString(R.string.event),
+                context.getString(R.string.history),
+                context.getString(R.string.restaurant),
+                context.getString(R.string.sport));
         return list.get(position);
     }
 }
